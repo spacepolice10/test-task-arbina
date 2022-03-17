@@ -1,4 +1,4 @@
-import { configureStore, createStore, combineReducers } from '@reduxjs/toolkit'
+import { createStore, combineReducers } from '@reduxjs/toolkit'
 import tableReducer from './tableSlice/'
 
 const rootReducers = combineReducers({ table: tableReducer });
