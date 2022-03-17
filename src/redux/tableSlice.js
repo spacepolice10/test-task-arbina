@@ -7,9 +7,7 @@ export const tableSlice = createSlice({
     },
     reducers: {
         addNewString: (state, action) => {
-            console.log(state.strings)
-            console.log(action)
-            state.strings.push(action.payload)
+            state.strings = state.strings.concat(action.payload)
         },
     }
 })
