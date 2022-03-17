@@ -5,6 +5,7 @@ import {
   NavbarHeading,
 } from '@blueprintjs/core';
 import AddButton from './AddButton';
+import ClearButton from './ClearButton';
 import SearchInput from './SearchInput';
 
 export default function NavigationBar() {
@@ -17,6 +18,8 @@ export default function NavigationBar() {
           <SearchInput />
           <NavbarDivider />
           <AddButton />
+          <NavbarDivider />
+          <ClearButton />
         </NavbarGroup>
       </Navbar>
     </>

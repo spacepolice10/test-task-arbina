@@ -9,16 +9,17 @@ import {
 export default function SearchInput() {
   const dispatch = useDispatch();
   const input = useSelector(searchInputState);
-  function filter(e) {
-    dispatch(changeInputState(e.target.value));
-    dispatch(filterTable(e.target.value));
+  // Simultaneously both text in search input and in the table changed so both parameters stay persistent
+  function filter(value) {
+    dispatch(changeInputState(value));
+    dispatch(filterTable(value));
   }
   return (
     <InputGroup
-      onInput={(e) => filter(e)}
+      onInput={(e) => filter(e.target.value)}
       value={input}
-      leftIcon="search"
-      placeholder="Search for the input"
+      leftIcon="filter"
+      placeholder="Filter"
     />
   );
 }

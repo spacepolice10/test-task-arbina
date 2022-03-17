@@ -16,6 +16,9 @@ export const tableSlice = createSlice({
         },
         filterTable: (state, action) => {
             state.filteredStrings = state.strings.filter(e => e.toLowerCase().includes(action.payload.toLowerCase()))
+        },
+        clearTable: (state) => {
+            state.strings = []
         }
     }
 })
@@ -23,6 +26,6 @@ export const tableSlice = createSlice({
 export const tableState = (state) => state.table.strings
 export const filteredTableState = (state) => state.table.filteredStrings
 export const searchInputState = (state) => state.table.searchInput
-export const { addNewString, filterTable, changeInputState } = tableSlice.actions
+export const { addNewString, filterTable, changeInputState, clearTable } = tableSlice.actions
 
 export default tableSlice.reducer
