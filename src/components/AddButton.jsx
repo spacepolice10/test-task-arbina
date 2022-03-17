@@ -17,7 +17,7 @@ export default function AddButton() {
       }
     >
       <Tooltip2 content="Click to add one more string">
-        <Button icon="plus" onClick={() => setIsOpen(true)} />
+        <Button icon="plus" onClick={() => setIsOpen(!isOpen)} />
       </Tooltip2>
     </Popover2>
   );
