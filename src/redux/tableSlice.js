@@ -3,15 +3,18 @@ import { createSlice } from '@reduxjs/toolkit'
 export const tableSlice = createSlice({
     name: 'table',
     initialState: {
-        value: ['some string']
+        strings: ['some string']
     },
     reducers: {
         addNewString: (state, action) => {
-            state.value.concat(action.payload)
+            console.log(state.strings)
+            console.log(action)
+            state.strings.push(action.payload)
         },
     }
 })
 
+export const tableState = (state) => state.table.strings
 export const { addNewString } = tableSlice.actions
 
 export default tableSlice.reducer

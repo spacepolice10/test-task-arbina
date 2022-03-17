@@ -1,9 +1,10 @@
 import { Divider } from '@blueprintjs/core';
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { tableState } from '../redux/tableSlice';
 
 export default function Table() {
-  const list = useSelector((state) => state.table.value);
+  const list = useSelector(tableState);
   return (
     <main
       style={{
