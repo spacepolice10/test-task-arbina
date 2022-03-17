@@ -9,7 +9,7 @@ import {
 export default function SearchInput() {
   const dispatch = useDispatch();
   const input = useSelector(searchInputState);
-  // Simultaneously both text in search input and in the table changed so both parameters stay persistent
+  // both text in search input and in the table changed simultaneously  so both parameters stay persistent
   function filter(value) {
     dispatch(changeInputState(value));
     dispatch(filterTable(value));

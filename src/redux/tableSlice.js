@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 export const tableSlice = createSlice({
     name: 'table',
     initialState: {
-        strings: ['hello', 'my dear'],
-        filteredStrings: [''],
+        strings: [],
+        filteredStrings: [],
         searchInput: ''
     },
     reducers: {
