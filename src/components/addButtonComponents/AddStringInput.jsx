@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addNewString, filterTable } from '../../redux/tableSlice';
 
-export default function AddStringInput({ setIsOpen }) {
+export default function AddStringInput({ setInputBlockIsOpen }) {
   const [input, setInput] = useState('');
   useEffect(() => {
     inputEl.current.focus();
@@ -14,13 +14,13 @@ export default function AddStringInput({ setIsOpen }) {
   function updateStore() {
     dispatch(addNewString(input));
     dispatch(filterTable(''));
-    setIsOpen(false);
+    setInputBlockIsOpen(false);
   }
   // handle searchInput data via keyboard
   function updateStoreUsingKeyboard(e) {
     if (e.key == 'Enter') {
       updateStore();
-      setIsOpen(false);
+      setInputBlockIsOpen(false);
     }
   }
   return (

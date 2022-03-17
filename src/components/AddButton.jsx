@@ -12,7 +12,7 @@ export default function AddButton() {
       isOpen={isOpen}
       content={
         <>
-          <AddStringInput setIsOpen={setIsOpen} />
+          <AddStringInput setInputBlockIsOpen={setIsOpen} />
         </>
       }
     >
