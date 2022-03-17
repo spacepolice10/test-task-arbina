@@ -11,9 +11,11 @@
     "@blueprintjs/core": "^3.53.0",
     "@blueprintjs/icons": "^3.32.0",
     "@blueprintjs/popover2": "^0.13.0",
+    "@reduxjs/toolkit": "^1.8.0",
     "prettier": "^2.6.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",

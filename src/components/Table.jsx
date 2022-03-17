@@ -1,8 +1,9 @@
 import { Divider } from '@blueprintjs/core';
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function Table() {
-  const testList = ['Text1', 'Text2'];
+  const list = useSelector((state) => state.table.value);
   return (
     <main
       style={{
@@ -14,7 +15,7 @@ export default function Table() {
     >
       <section style={{ display: 'flex', flexDirection: 'column' }}>
         {React.Children.toArray(
-          testList.map((e) => {
+          list.map((e) => {
             return (
               <>
                 <h1>{e}</h1>
